@@ -1,0 +1,65 @@
+/* The astericks is basically the factory reset of a website meaning..
+Every webpage when starting will have a default setting of spacing.
+This means that its good practice to set margin and padding to 0 because
+it removes any extra spacing. In this case, the qr code is had extra spacing that needed
+to be removed in order to align with the text. */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* Container covers the content. setting max-width to 400px shortens the content. 
+Margin 0 auto makes it neater.*/
+.container {
+    max-width: 400px;
+    margin: 0 auto;
+
+}
+
+/* This is the image only. By setting the width to 100%, you are resizing the photo to fit the rest 
+of the container.*/
+#qr {
+    width: 100%;
+    border-radius: 2%;
+}
+
+
+/* The padding being set to 18px give the content the outer white layer on the qrcode. 
+Without it, the qr code wouldnt have the white block surrounding it. */
+.qrcode {
+    background-color: hsl(0, 0%, 100%);
+    padding: 18px;
+    border-radius: 4%;
+    text-align: center;
+
+
+}
+
+/*The padding is necessary for proper spacing around both texts*/
+.text {
+    padding: 22px 10px;
+}
+
+/*Padding bottom to space the 2 texts apart*/
+.text h1 {
+    color: hsl(218, 44%, 22%);
+    padding-bottom: 15px;
+}
+
+/*The  h1 and p have different color text thats why theyre separate*/
+.text p {
+    color: hsl(220, 15%, 55%);
+}
+
+
+/* I centered the content by using flexbox along with adjusting min-height to 100vh*/
+body {
+    font-family: 'Outfit', sans-serif;
+    background-color: hsl(212, 45%, 89%);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 15px;
+}
